@@ -40,11 +40,14 @@ INSTALLED_APPS = [
 
 
     'rest_framework',
+    "corsheaders",
 
 
     'home',
 ]
 
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # REST_FRAMEWORK = {
 #     'DEFAULT_PERMISSION_CLASSES': [

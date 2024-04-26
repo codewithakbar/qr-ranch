@@ -2,11 +2,11 @@ from django.contrib import admin
 from .models import Maktablar
 
 class MaktablarAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('name', 'direktor_name')
 
     fieldsets = (
         (None, {
-            'fields': ('name', 'slug'),
+            'fields': ('name', 'direktor_name', 'slug'),
         }),
     )
     search_fields = ('name',)

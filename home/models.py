@@ -5,6 +5,7 @@ from django.utils.text import slugify
 class Maktablar(models.Model):
 
     name = models.CharField(max_length=233, verbose_name="Maktab nomi")
+    direktor_name = models.CharField(max_length=233, verbose_name="Direktor nomi")
     slug = models.SlugField(unique=True, max_length=255, verbose_name="Slug")
 
     def save(self, *args, **kwargs):

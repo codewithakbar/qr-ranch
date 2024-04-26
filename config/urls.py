@@ -20,11 +20,14 @@ from django.views.static import serve
 from django.conf.urls.static import static
 from django.urls import path, include, re_path
 
+from home.views import home_page
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
 
+    path('', home_page),
     path('api/', include('home.urls')),
     path('api-auth/', include('rest_framework.urls')),
 

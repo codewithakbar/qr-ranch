@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cool Animated Page with Logo and Text</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 120px; /* Adjust the width of the logo as needed */
+    height: auto; /* To maintain aspect ratio */
+    margin-right: 20px; /* Add margin to separate logo from text */
+    animation: rotate 5s linear infinite; /* Adjust animation duration and type */
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .text {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #333; /* Text color */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo-container">
+    <!-- Replace 'ranch.png' with the path to your logo image -->
+    <img src="/media/logo/ranch.png" alt="Logo" class="logo">
+    <div class="text">
+      Ranch bu katta imkoniyatlar universiteti
+    </div>
+  </div>
+</div>
+
+<script>
+  // Add JavaScript here if you want to add more interactivity or complex animations
+</script>
+</body>
+</html>

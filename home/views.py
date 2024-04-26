@@ -11,7 +11,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from django.conf import settings
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.core.files.storage import default_storage
 from django.core.files.storage import FileSystemStorage
 
@@ -32,8 +32,8 @@ class MaktablarQRCodeAPIView(APIView):
             border=4,
         )
         
-        qr.add_data("https://youtube.com/")
-        # qr.add_data(request.build_absolute_uri())
+        # qr.add_data("https://youtube.com/")
+        qr.add_data(request.build_absolute_uri())
         qr.make(fit=True)
 
         img = qr.make_image(fill_color="black", back_color="white")
@@ -59,3 +59,9 @@ class MaktablarQRCodeAPIView(APIView):
         serializer = MaktablarSerializer(maktab)
         # Javobda rasmlar uchun URL-ni qo'shamiz
         return Response({'maktab': serializer.data, 'qr_image_url': image_url}, status=status.HTTP_200_OK)
+    
+
+
+def home_page(request):
+
+    return render(request, "home.html")

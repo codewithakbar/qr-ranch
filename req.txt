@@ -2,7 +2,7 @@ django
 Pillow
 django-cors-headers
 djangorestframework
-
+whitenoise
 
 
 qrcode[pil]
